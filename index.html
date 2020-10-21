@@ -18,7 +18,6 @@
 
     <title>HardinBernhardtRanks by jacobhb175</title>
   </head>
-
   <body>
     <header>
       <div class="inner">
@@ -26,15 +25,6 @@
         <h2>National History Bowl Rankings</h2>
         <a href="https://github.com/jacobhb175/hardinbernhardtranks" class="button"><small>View project on</small> GitHub</a>
       </div>
-      <!--
-      <div class="topnav">
-        <a class="active" href="#rankings">Rankings</a>
-        <a href="#tournaments">List of Tournaments</a>
-        <a href="#analysis">Analysis</a>
-        <a href="#contact">Contact</a>
-      </div>
-      -->
-
     </header>
 
     <div id="content-wrapper">
@@ -53,12 +43,11 @@
 <h3>New Rating Formula</h3>
 <p>Following a game between Team A and Team B, this formula calculates the new Elo rating of Team A. The new rating formula takes the percentage of the game’s points scored by Team A, multiplies it by T to adjust for conversion issues, and compares it to the expected score for A (S<sub>E</sub>(A)). That result is then multiplied by the variables q and K to adjust for strength of field, and games played respectively.</p>
 <p>
-  \[R_n(A) = {R_o(A)+qK[T({S_A\over S_A+S_B})-S_E(A)]}\]
+  \[R_n(A) = {R_o(A)+qK[({S_A\over S_A+S_B})-S_E(A)]}\]
   R<sub>n</sub> = new rating</br>
   R<sub>o</sub> = old rating</br>
   q = strength of field</br>
-  K = (800/gA)</br>
-  g = games played</br>
+  K = (800/games played)</br>
   S = score</br>
   S<sub>E</sub> = expected score</br>
 </p>
@@ -69,11 +58,8 @@
 <a id="q-value" class="anchor" href="#q-value" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>q-Value</h3>
 <p>The q-value is used to represent strength of field at a tournament and intended to help improve elo as a measure of skill unaffected by the field a team is up against, and thus more useful and accurate as a comparison between teams from different regions. It is calculated as a ratio of average total points scored per game at a given tournament : average total points scored per game on a given set, and is calculated independently for the Varsity and JV fields.</p>
 <h3>
-<a id="t-value" class="anchor" href="#t-value" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>T-Value</h3>
-<p>The T-value is used to account for the inherent issues in equating the percent chance of a given winning to the percent of total points that team will score. It is calculated as a ratio of the percent of total points scored by a given team : the percent chance given to that team to win.</p>
-<h3>
-<a id="K-value" class="anchor" href="#g-value" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>K-Value</h3>
-<p>The K-value is a multiplier to adjust for the different formats of tournaments which lead some teams to play more or fewer games. It is set equal to 800/the number of games played by the team (not counting byes or crossover matches).</p>
+<a id="K-value" class="anchor" href="#k-value" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>K-Value</h3>
+<p>The K-value is a multiplier to adjust for the different formats of tournaments which lead some teams to play more or fewer games. It is set equal to 800 over the number of games played by the team (not counting byes or crossover matches).</p>
 <h2>
 <a id="list-of-tournaments" class="anchor" href="#list-of-tournaments" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>List of Tournaments</h2>
 
