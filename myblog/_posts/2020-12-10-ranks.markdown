@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "The Equations"
+date:   2020-12-10 10:20:20 -0500
+categories: jekyll update
+---
+
+## The Formulas
+### Expected Score Formula
+The expected score forumla is based off of that used in chess and Go elo systems, calculating the estimated percent of points to be scored by a given team A against a given team B on the basis of their elo ratings.
+\\[S_E(A) = {1\over e^{(R_B-R_A)/400}+1}\\]
+
+### New Rating Formula
+The new rating formula is a modified and expanded version of the formula used for calculating chess and Go elo. The equation is updated to work in terms of the percent of all points scored by a given team A in their game against team B, rather than by a more binary win-loss-tie. That percentage is then compared to the percentage that would be expected based on the rating difference and the ratings are adjusted accordingly. Additionally, the modifiers q and K are incorporated to adjust for other limitations of the History Bowl format, specifically strength of field and number of games played respectively.
+\\[R_n(A) = {R_o(A)+qK[({S_A\over S_A+S_B})-S_E(A)]}\\]
+
+## The Variables
+### q-Value
+The q-value is a multiplier used to represent strength of field at a tournament and intended to help improve elo as a measure of skill unaffected by the field a team is up against, and thus more useful and accurate as a comparison between teams from different regions. It is calculated as a ratio of average total points scored per game at a given tournament : average total points scored per game on a given set, and is calculated independently for Varsity and JV fields.
+\\[q = {cPPG_T\over cPPG_S}\\]
+### K-Value
+The K-value is a multiplier to adjust for the different formats of tournaments which lead some teams to play more or fewer games, as well as to account for the uncertainty inherent in early games before rankings are more finalized. It is set equal to 800 over the number of games played by the team (not counting byes or crossover matches), multiplied by the square root of the current number game.
+\\[K = {\sqrt G_C{800\over G_T}}\\]

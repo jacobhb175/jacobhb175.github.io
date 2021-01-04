@@ -18,18 +18,17 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
+title: Hardin-Bernhardt Ranks
+email: jhardinbernhardt@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Hardin-Bernhardt Ranks is a new way of ranking National History Bowl teams using a modified version of the Go Elo formula that takes into account strength of field and margin of victory.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: jacobhb2005
+github_username:  jacobhb175
 
 # Build settings
+# theme: jekyll-theme-architect
 theme: minima
 plugins:
   - jekyll-feed

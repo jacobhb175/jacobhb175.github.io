@@ -1,0 +1,44 @@
+<markdown>
+---
+layout: post
+title:  "Welcome to Jekyll!"
+---
+</markdown>
+
+<a id="the-formulas" class="anchor" href="#the-formulas" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Formulas</h2>
+<h3>Expected Score Formula</h3>
+<p>This formula uses the Elo ratings (R) of a given lower-rated Team A and higher-rated Team B to calculate what percentage of the total points Team A would be expected to score in a game against Team B. This formula will always result in a value for the expected score of A (S<sub>E</sub>(A)) between 0 and 1.</p>
+<p>
+  \[S_E(A) = {1\over e^{(R_B-R_A)/400}+1}\]
+  S<sub>E</sub>(A) = expected score of A</br>
+  R<sub>B</sub> = current rating of B</br>
+  R<sub>A</sub> = current rating of A</br>
+</p>
+<h3>New Rating Formula</h3>
+<p>Following a game between Team A and Team B, this formula calculates the new Elo rating of Team A. The new rating formula takes the percentage of the game’s points scored by Team A, multiplies it by T to adjust for conversion issues, and compares it to the expected score for A (S<sub>E</sub>(A)). That result is then multiplied by the variables q and K to adjust for strength of field, and games played respectively.</p>
+<p>
+  \[R_n(A) = {R_o(A)+qK[({S_A\over S_A+S_B})-S_E(A)]}\]
+  R<sub>n</sub> = new rating</br>
+  R<sub>o</sub> = old rating</br>
+  q = strength of field value</br>
+  S = score</br>
+  S<sub>E</sub>(A) = expected score of A</br>
+  K = game weight value</br>
+  
+</p>
+
+<h2>
+<a id="the-variables" class="anchor" href="#the-variables" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Variables</h2>
+<h3>
+<a id="q-value" class="anchor" href="#q-value" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>q-Value</h3>
+<p>The q-value is used to represent strength of field at a tournament and intended to help improve elo as a measure of skill unaffected by the field a team is up against, and thus more useful and accurate as a comparison between teams from different regions. It is calculated as a ratio of average total points scored per game at a given tournament : average total points scored per game on a given set, and is calculated independently for the Varsity and JV fields.</p>
+\[q = {cPPG_T\over cPPG_S}\]
+cPPG<sub>T</sub> = combined points per game overall all games played at the tournament</br>
+cPPG<sub>T</sub> = combined points per game over all games played on the set
+<h3>
+<a id="K-value" class="anchor" href="#k-value" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>K-Value</h3>
+<p>The K-value is a multiplier to adjust for the different formats of tournaments which lead some teams to play more or fewer games, as well as to account for the uncertainty inherent in early games before rankings are more finalized. It is set equal to 800 over the number of games played by the team (not counting byes or crossover matches), multiplied by the square root of the current number game.</p>
+\[K = {\sqrt G_C{800\over G_T}}\]
+G<sub>C</sub> = current games played</br>
+G<sub>T</sub> = total games played by the team
+
