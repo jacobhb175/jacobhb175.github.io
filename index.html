@@ -30,10 +30,12 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <h1><i><b>News: QBRanks coming soon!</i></b></h1>
-<h1><a id="hardin-bernhardt-ranks" class="anchor" href="#hardin-bernhardt-ranks" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Hardin-Bernhardt Ranks</h1>
-<p>Hardin-Bernhardt Ranks is a new way of ranking NHBB teams using a modified version of the Go Elo formula that takes into account strength of field and margin of victory.</p>
-<h2>
+          <h1><a id="hardin-bernhardt-ranks" class="anchor" href="#hardin-bernhardt-ranks" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Hardin-Bernhardt Ranks</h1>
+          <p>Hardin-Bernhardt Ranks is a new way of ranking NHBB teams using a modified version of the Glicko Go Elo formula that takes into account strength of field and margin of victory.</p>
+          <!--<h1><i><b>New: QBRanks coming soon!</i></b></h1>
+          <p>\[R_n(A) = {R_o(A)+\left[\max\left(1,\min\left(RD_A+350-\sqrt{RD_A^2+g_A{(350^2-50^2)\over 100}^2},350\right)\right)\left({avg_t\over {avg_s\over avg_b}avg_a}{avg_d\over avg_a}{S_A\over S_A+S_B}-{1\over e^{(R_B-R_A)/400}+1}\right)\right]}\]</p>-->
+          <p>\[R_n(A) = {\left[\max R_o(A)+\left(\max\left(1,\min\left(RD_A+350-\sqrt{RD_A^2+2g_A{(350^2-50^2)\over 100}^2},350\right)\right)\left({avg_t\over avg_s}{S_A\over S_A+S_B}-{1\over e^{(R_B-R_A)/400}+1}\right)\right),R_o\right]}\]</p>
+<h2><!--
 <a id="the-formulas" class="anchor" href="#the-formulas" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Formulas</h2>
 <h3>Expected Score Formula</h3>
 <p>This formula uses the Elo ratings (R) of a given lower-rated Team A and higher-rated Team B to calculate what percentage of the total points Team A would be expected to score in a game against Team B. This formula will always result in a value for the expected score of A (S<sub>E</sub>(A)) between 0 and 1.</p>
@@ -70,8 +72,8 @@ cPPG<sub>T</sub> = combined points per game over all games played on the set
 \[K = {\sqrt G_C{800\over G_T}}\]
 G<sub>C</sub> = current games played</br>
 G<sub>T</sub> = total games played by the team
-<h3>
-  <a id="varsity-rankings" class="anchor" href="#varsity-rankings" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Varsity C-Set Rankings</h3>
+<h3>-->
+  <a id="varsity-rankings" class="anchor" href="#varsity-rankings" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Varsity B-Set Rankings</h3>
   <table>
   <thead>
   <tr>
@@ -84,96 +86,67 @@ G<sub>T</sub> = total games played by the team
   <tbody>
     <tr>
       <td>1</td>
-      <td>Montgomery Blair A</td>
-      <td>Maryland</td>
-      <td>1514.042</td>
+      <td>Montgomery Blair High School</td>
+      <td>Silver Spring, Maryland</td>
+      <td>1789.714</td>
     </tr>
     <tr>
       <td>2</td>
-      <td>Hunter A</td>
-      <td>New York</td>
-      <td>1496.982</td>
+      <td>Georgetown Day School</td>
+      <td>Washington, DC</td>
+      <td>1675.615</td>
     </tr>
       <td>3</td>
-      <td>Lambert</td>
-      <td>Georgia</td>
-      <td>1455.941</td>
+      <td>James Clemens High School</td>
+      <td>Madison, Alabama</td>
+      <td>1644.115</td>
     </tr>
     <tr>
       <td>4</td>
-      <td>Newton North A</td>
-      <td>Massachusetts</td>
-      <td>1424.365</td>
+      <td>Hunter College High School</td>
+      <td>New York City, New York</td>
+      <td>1583.887</td>
     </tr>
     <tr>
       <td>5</td>
-      <td>Stevenson A</td>
-      <td>Illinois</td>
-      <td>1400.510</td>
+      <td>Centennial High School</td>
+      <td>Ellicott City, Maryland</td>
+      <td>1573.682</td>
     </tr>
     <tr>
       <td>6</td>
-      <td>Hotchkiss A</td>
-      <td>Connecticut</td>
-      <td>1395.248</td>
+      <td>The Hotchkiss School</td>
+      <td>Lakeville, Connecticut</td>
+      <td>1562.538</td>
     </tr>
     <tr>
       <td>7</td>
-      <td>Ransom Everglades A</td>
-      <td>Florida</td>
-      <td>1392.356</td>
+      <td>Auburn High School</td>
+      <td>Rockford, Illinois</td>
+      <td>1549.901</td>
     </tr>
     <tr>
       <td>8</td>
-      <td>Holmdel</td>
-      <td>New Jersey</td>
-      <td>1389.857</td>
+      <td>Barrington High School</td>
+      <td>Barrington, Illinois</td>
+      <td>1545.192</td>
     </tr>
     <tr>
       <td>9</td>
-      <td>Northfield A</td>
-      <td>Minnesota</td>
-      <td>1388.321</td>
+      <td>Ridgewood High School</td>
+      <td>Ridgewood, New Jersey</td>
+      <td>1517.602</td>
     </tr>
     <tr>
       <td>10</td>
-      <td>Lindsey Homeschool</td>
-      <td>Missouri</td>
-      <td>1365.450</td>
-    </tr>
-    <tr>
-      <td>11</td>
-      <td>James Clemens</td>
-      <td>Alabama</td>
-      <td>1362.185</td>
-    </tr>
-    <tr>
-      <td>12</td>
-      <td>Newton North B</td>
-      <td>Massachusetts</td>
-      <td>1324.423</td>
-    </tr>
-    <tr>
-      <td>13</td>
-      <td>Hoover</td>
-      <td>Alabama</td>
-      <td>1320.822</td>
-    </tr>
-    <tr>
-      <td>14</td>
-      <td>Ridgewood A</td>
-      <td>New Jersey</td>
-      <td>1316.170</td>
-    <tr>
-      <td>15</td>
-      <td>Georgetown Day</td>
-      <td>DC</td>
-      <td>1304.895</td>
+      <td>Thomas Jefferson High School </br>for Science and Technology</td>
+      <td>Alexandria, Virginia</td>
+      <td>1486.319</td>
     </tr>
   </tbody>
   </table>
 <h3>
-<a id="junior-varsity-rankings" class="anchor" href="#junior-varsity-rankings" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Junior Varsity C-Set Rankings</h3>
+<a id="junior-varsity-rankings" class="anchor" href="#junior-varsity-rankings" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Junior Varsity B-Set Rankings</h3>
 <table>
 <thead>
 <tr>
@@ -186,97 +159,66 @@ G<sub>T</sub> = total games played by the team
 <tbody>
   <tr>
     <td>1</td>
-    <td>Detroit Country Day</td>
-    <td>Michigan</td>
-    <td>1790.302</td>
+    <td>Hunter College High School</td>
+    <td>New York City, New York</td>
+    <td>1507.765</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>Hunter B</td>
-    <td>New York</td>
-    <td>1646.792</td>
+    <td>East Brunswick High School</td>
+    <td>East Brunswick, New Jersey</td>
+    <td>1506.765</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Adlai E. Stevenson High School</td>
+    <td>Lincolnshire, Illinois</td>
+    <td>1484.543</td>
   </tr>
   <tr>
     <td>4</td>
-    <td>East Brunswick</td>
-    <td>New Jersey</td>
-    <td>1629.067</td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>Stevenson C</td>
-    <td>Illinois</td>
-    <td>1619.109</td>
+    <td>Wilton High School</td>
+    <td>Wilton, Connecticut</td>
+    <td>1469.057</td>
   </tr>
   <tr>
     <td>5</td>
-    <td>Wilton K</td>
-    <td>Connecticut</td>
-    <td>1542.966</td>
+    <td>Washington High School</td>
+    <td>Fremont, California</td>
+    <td>1410.098</td>
   </tr>
   <tr>
     <td>6</td>
-    <td>Ransom Everglades B</td>
-    <td>Florida</td>
-    <td>1357.295</td>
+    <td>Justin Wakeland High School</td>
+    <td>Frisco, Texas</td>
+    <td>1390.893</td>
   </tr>
   <tr>
     <td>7</td>
-    <td>Buchholz A</td>
-    <td>Florida</td>
-    <td>1354.483</td>
+    <td>Detroit Country Day School</td>
+    <td>Beverly Hills, Michigan</td>
+    <td>1364.181</td>
   </tr>
   <tr>
     <td>8</td>
-    <td>Centennial B</td>
-    <td>Maryland</td>
-    <td>1277.657</td>
+    <td>Ransom Everglades School</td>
+    <td>Coconut Grove, Florida</td>
+    <td>1356.487</td>
   </tr>
   <tr>
     <td>9</td>
-    <td>Montgomery Blair B</td>
-    <td>Maryland</td>
-    <td>1267.114</td>
+    <td>Irvington High School</td>
+    <td>Fremont, California</td>
+    <td>1327.016</td>
   </tr>
   <tr>
     <td>10</td>
-    <td>Ransom Everglades C</td>
-    <td>Florida</td>
-    <td>1255.143</td>
-  </tr>
-  <tr>
-    <td>11</td>
-    <td>Centennial B</td>
-    <td>Maryland</td>
-    <td>1253.450</td>
-  </tr>
-  <tr>
-    <td>12</td>
-    <td>Millburn B</td>
-    <td>New Jersey</td>
-    <td>1225.620</td>
-  </tr>
-  <tr>
-    <td>13</td>
-    <td>IMSA</td>
-    <td>Illinois</td>
-    <td>1218.257</td>
-  </tr>
-  <tr>
-    <td>14</td>
-    <td>Stevenson D</td>
-    <td>Illinois</td>
-    <td>1213.482</td>
-  </tr>
-  <tr>
-    <td>15</td>
-    <td>Amador Valley B</td>
-    <td>California</td>
-    <td>1206.147</td>
+    <td>Yonkers Middle High School</td>
+    <td>Yonkers, New York</td>
+    <td>1316.768</td>
   </tr>
 </tbody>
 </table>
-<p>*Note: Due to allegations of cheating and/or pledges not to play future tournaments, certain teams have been excluded from these rankings pending further investigation.</p>
 <h3>
   <a id="tournaments" class="anchor" href="#tournaments" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tournaments</h3>
   <table>
@@ -289,7 +231,30 @@ G<sub>T</sub> = total games played by the team
   </tr>
   </thead>
   <tbody>
-    <tr>
+    <td>Expert Winter</td>
+    <td>B</td>
+    <td>1.209</td>
+    <td>1.084</td>
+  </tr>
+  <tbody>
+    <td>Standard 1 Winter</td>
+    <td>B</td>
+    <td>0.965</td>
+    <td>0.835</td>
+  </tr>
+  <tbody>
+    <td>Standard 2 Winter</td>
+    <td>B</td>
+    <td>1.059</td>
+    <td>0.953</td>
+  </tr>
+  <tbody>
+    <td>Novice Winter</td>
+    <td>B</td>
+    <td>0.928</td>
+    <td>0.931</td>
+  </tr>
+    <!--<tr>
       <td>Southeast Fall</td>
       <td>C</td>
       <td>0.972</td>
